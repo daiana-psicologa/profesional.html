@@ -33,7 +33,7 @@ body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif; color:var(--i
 
 /* Layout base */
 .wrapper{max-width:var(--max); margin:auto; padding:28px 22px}
-header.cv-head{display:flex; gap:22px; align-items:center; padding:8px 0 18px; border-bottom:1px solid var(--line)}
+header.cv-head{display:flex; gap:28px; align-items:center; padding:8px 0 18px; border-bottom:1px solid var(--line)}
 .logo{width:56px; height:56px; border-radius:12px; display:grid; place-items:center; background:#fff; border:1px solid var(--line)}
 .logo img{width:40px; height:40px}
 .hgroup h1{margin:0; font:900 28px/1.2 Inter}
@@ -76,7 +76,12 @@ ul{margin:.4rem 0 .8rem 1.2rem}
 }
 
 /* Footer */
-footer{margin-top:14px; padding:14px 0 24px; border-top:1px solid var(--line); color:var(--muted); font-size:.95rem}
+footer.foot{
+  margin-top:18px; padding:14px 0 22px;
+  border-top:1px solid var(--line);
+  text-align:center;
+}
+footer.foot small{ color:#6f6a62; font-size:.95rem }
 
 /* Print */
 @media print{
@@ -87,6 +92,7 @@ footer{margin-top:14px; padding:14px 0 24px; border-top:1px solid var(--line); c
   a[href^="http"]:after{content:" (" attr(href) ")"; font-weight:400}
   .photo-box .rect{ box-shadow:none }
   .photo-box .portrait{ filter:none }
+  footer.foot{ display:none }
 }
 </style>
 
@@ -196,23 +202,19 @@ footer{margin-top:14px; padding:14px 0 24px; border-top:1px solid var(--line); c
         <h2>Datos de contacto</h2>
         <p><strong>Tel.:</strong> <a href="tel:+5492996032267">+54 9 299 603 2267</a></p>
         <p><strong>Email:</strong> <a href="mailto:daianabeltran@gmail.com">daianabeltran@gmail.com</a></p>
-        <p><strong>Ubicación:</strong> Neuquén Capital · Rincon del Rio (Argentina)</p>
+        <p><strong>Ubicación:</strong> Neuquén Capital · Rincón del Río (Argentina)</p>
       </article>
+      <!-- Podés usar esta segunda columna para referencias o dejarla vacía -->
+      <article class="card" aria-hidden="true" style="background:transparent;border:0;box-shadow:none"></article>
+    </section>
 
-
-
-
-
-
-
-      
-    <footer>
-      © <span id="y"></span> Daiana Beltrán — CV profesional.
+    <footer class="foot">
+      <small>Lic. Daiana Beltrán — Psicóloga clínica · Neuquén</small>
     </footer>
   </div>
 
 <script>
-  document.getElementById('y').textContent = new Date().getFullYear();
+  // (Si en algún momento querés volver a mostrar año dinámico, lo agregamos aquí)
 </script>
 </body>
 </html>
