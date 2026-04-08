@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perniles Premium | Eventos con sabor, presencia y estilo</title>
-  <meta name="description" content="Perniles premium para eventos sociales, empresariales y celebraciones especiales. Presentación impecable, sabor memorable y una experiencia visual a la altura del momento." />
+  <title>Perniles para Eventos en Neuquén | Perniles Premium para Fiestas y Reuniones</title>
+  <meta name="description" content="Perniles para eventos en Neuquén. Opciones para cumpleaños, fiestas, reuniones y eventos empresariales. Presentación cuidada, servicio profesional y presupuestos por WhatsApp." />
   <meta name="theme-color" content="#1a120d" />
+  <meta name="keywords" content="perniles para eventos, perniles en Neuquén, pernil para cumpleaños, perniles para fiestas, catering de perniles, perniles para reuniones, perniles para eventos empresariales" />
 
   <style>
     :root{
@@ -56,7 +57,7 @@
       position:sticky;
       top:0;
       z-index:1000;
-      background:rgba(15,10,7,.72);
+      background:rgba(15,10,7,.78);
       backdrop-filter: blur(14px);
       border-bottom:1px solid rgba(255,255,255,.06);
     }
@@ -117,7 +118,7 @@
 
     .menu a{
       position:relative;
-      opacity:.9;
+      opacity:.92;
       transition:.25s ease;
     }
 
@@ -184,7 +185,7 @@
       align-items:center;
       overflow:hidden;
       background:
-        linear-gradient(90deg, rgba(14,10,8,.80) 0%, rgba(14,10,8,.58) 42%, rgba(14,10,8,.30) 100%),
+        linear-gradient(90deg, rgba(14,10,8,.82) 0%, rgba(14,10,8,.56) 42%, rgba(14,10,8,.28) 100%),
         linear-gradient(180deg, rgba(11,8,6,.34) 0%, rgba(11,8,6,.70) 100%),
         url('assets/img/portada-sandwich.webp') center center / cover no-repeat;
     }
@@ -202,12 +203,12 @@
     .hero-inner{
       position:relative;
       z-index:2;
-      width:min(92%, var(--max));
+      width:min(94%, 1320px);
       margin:auto;
       padding:80px 0 72px;
       display:grid;
-      grid-template-columns: 1.08fr .92fr;
-      gap:36px;
+      grid-template-columns:1.2fr .8fr;
+      gap:34px;
       align-items:end;
     }
 
@@ -229,16 +230,16 @@
 
     .hero-copy h1{
       margin:0 0 18px;
-      max-width:760px;
-      font-size:clamp(2.9rem, 6vw, 6.3rem);
-      line-height:.92;
-      letter-spacing:-2.8px;
+      max-width:980px;
+      font-size:clamp(2.8rem, 5.6vw, 5.7rem);
+      line-height:.95;
+      letter-spacing:-2px;
       color:#fff8ef;
     }
 
     .hero-copy p{
       margin:0;
-      max-width:720px;
+      max-width:760px;
       font-size:clamp(1rem, 1.45vw, 1.18rem);
       color:#f0ddca;
     }
@@ -345,7 +346,7 @@
 
     .section-text{
       margin:0;
-      max-width:850px;
+      max-width:900px;
       color:var(--muted);
       font-size:1.08rem;
     }
@@ -547,6 +548,31 @@
       color:#5f5046;
     }
 
+    .faq-grid{
+      margin-top:34px;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .faq-card{
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:24px;
+      padding:28px;
+    }
+
+    .faq-card h3{
+      margin:0 0 10px;
+      color:#fff7ed;
+      font-size:1.2rem;
+    }
+
+    .faq-card p{
+      margin:0;
+      color:#d6c2ad;
+    }
+
     .cta{
       position:relative;
       overflow:hidden;
@@ -634,11 +660,9 @@
         justify-self:start;
       }
 
-      .services-grid{
-        grid-template-columns:repeat(2,1fr);
-      }
-
-      .light-cards{
+      .services-grid,
+      .light-cards,
+      .faq-grid{
         grid-template-columns:repeat(2,1fr);
       }
 
@@ -672,11 +696,12 @@
       }
 
       .hero-copy h1{
-        letter-spacing:-1.6px;
+        letter-spacing:-1.3px;
       }
 
       .services-grid,
       .light-cards,
+      .faq-grid,
       .gallery-grid{
         grid-template-columns:1fr;
       }
@@ -718,7 +743,7 @@
   <header class="topbar">
     <div class="container nav">
       <a href="#" class="brand">
-        <img src="assets/img/logo.png.webp" alt="Logo de la marca" class="brand-logo">
+        <img src="assets/img/logo.png.webp" alt="Logo de Perniles Premium" class="brand-logo">
         <div class="brand-copy">
           <strong>Perniles Premium</strong>
           <span>Eventos sociales, empresariales y celebraciones</span>
@@ -729,6 +754,7 @@
         <a href="#propuesta">Propuesta</a>
         <a href="#servicios">Servicios</a>
         <a href="#galeria">Galería</a>
+        <a href="#faq">Consultas</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
@@ -739,38 +765,37 @@
   <section class="hero">
     <div class="hero-inner">
       <div class="hero-copy">
-        <span class="eyebrow">Perniles con presencia, sabor y estilo</span>
-        <h1>Tu evento no necesita comida improvisada. Necesita una propuesta que se vea a la altura.</h1>
+        <span class="eyebrow">Perniles para eventos en Neuquén</span>
+        <h1>Perniles para eventos que se ven bien, rinden bien y hacen quedar bien a quien organiza.</h1>
         <p>
-          Llevamos perniles y mesas de presentación que combinan imagen cuidada, abundancia y sabor memorable,
-          para que el evento se vea mejor, se disfrute más y deje una impresión fuerte desde el primer momento.
+          Llevamos perniles para cumpleaños, fiestas, reuniones familiares y eventos empresariales con una presentación cuidada, abundante y lista para disfrutar. Una opción práctica, rica y visualmente atractiva para resolver la comida sin complicarte.
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/5492996566702?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20para%20perniles%20para%20evento." target="_blank">Quiero una propuesta</a>
-          <a class="btn btn-secondary" href="#galeria">Ver galería</a>
+          <a class="btn btn-primary" href="https://wa.me/5492996566702?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20para%20perniles%20para%20evento." target="_blank">Pedir presupuesto</a>
+          <a class="btn btn-secondary" href="#galeria">Ver fotos reales</a>
         </div>
 
         <div class="hero-points">
-          <span>Cumpleaños y celebraciones</span>
-          <span>Eventos sociales</span>
-          <span>Empresas y reuniones</span>
-          <span>Presentación premium</span>
+          <span>Cumpleaños y fiestas</span>
+          <span>Reuniones familiares</span>
+          <span>Eventos empresariales</span>
+          <span>Atención en Neuquén</span>
         </div>
       </div>
 
       <aside class="hero-card">
-        <small>Experiencia visual + sabor</small>
-        <h3>Una mesa que no solo se come. También viste el evento.</h3>
+        <small>Por qué lo eligen</small>
+        <h3>Una opción rica, abundante y fácil de resolver para tu evento.</h3>
         <p>
-          Cuando la presentación está bien resuelta, la comida se transforma en parte de la experiencia.
+          Ideal para quienes quieren ofrecer algo que guste, se vea tentador y permita compartir sin vueltas.
         </p>
 
         <div class="hero-list">
-          <div>Perniles con estética cuidada y presencia visual.</div>
-          <div>Acompañamientos que completan la propuesta.</div>
-          <div>Formato ideal para compartir y disfrutar.</div>
-          <div>Imagen más cálida, abundante y profesional.</div>
+          <div>Perniles con presentación cuidada.</div>
+          <div>Acompañamientos que completan la mesa.</div>
+          <div>Formato práctico para servir y disfrutar.</div>
+          <div>Presupuesto directo por WhatsApp.</div>
         </div>
       </aside>
     </div>
@@ -779,24 +804,23 @@
   <section id="propuesta" class="section-dark">
     <div class="container intro">
       <span class="kicker">Propuesta de valor</span>
-      <h2 class="section-title">No se trata solo de servir comida. Se trata de elevar la percepción del evento.</h2>
+      <h2 class="section-title">Si querés resolver la comida de tu evento con algo rico, abundante y que guste de verdad, esta propuesta es para vos.</h2>
       <p class="section-text" style="margin-left:auto;margin-right:auto;">
-        Un buen pernil funciona porque combina practicidad, impacto visual y una experiencia rica para compartir.
-        La clave está en que se vea tentador, abundante y bien presentado, en línea con el momento que querés crear.
+        Los perniles funcionan porque son prácticos, rendidores y visualmente atractivos. Te ayudan a ofrecer una comida que se disfruta, se comparte fácil y hace que el evento se vea mejor sin entrar en complicaciones.
       </p>
 
       <div class="value-grid">
         <article class="value-card">
-          <h3>Más presencia</h3>
-          <p>La mesa se convierte en un punto fuerte del evento y transmite mejor nivel desde que la gente llega.</p>
+          <h3>Te resuelve la comida</h3>
+          <p>Una opción práctica para no complicarte organizando platos difíciles o servicios innecesarios.</p>
         </article>
         <article class="value-card">
-          <h3>Más tranquilidad</h3>
-          <p>Una propuesta práctica para resolver la comida sin perder calidad visual ni calidez en la experiencia.</p>
+          <h3>Le gusta a la gente</h3>
+          <p>Es una propuesta conocida, tentadora y fácil de disfrutar en cumpleaños, reuniones y celebraciones.</p>
         </article>
         <article class="value-card">
-          <h3>Más recordación</h3>
-          <p>Cuando algo entra por los ojos y además es rico, los invitados lo disfrutan, lo comentan y lo recuerdan.</p>
+          <h3>Hace lucir el evento</h3>
+          <p>Cuando la mesa se ve abundante y bien presentada, todo el encuentro transmite mejor imagen.</p>
         </article>
       </div>
     </div>
@@ -808,18 +832,16 @@
         <span class="kicker">Para quienes quieren quedar bien de verdad</span>
         <h2 class="section-title">Una propuesta ideal para eventos que buscan sabor, estética y una sensación de abundancia bien resuelta.</h2>
         <p class="section-text">
-          Ya sea una reunión familiar, un cumpleaños, un festejo especial o un encuentro de empresa, el pernil
-          tiene algo muy valioso: convoca, viste y genera una experiencia relajada pero con presencia.
+          Ya sea una reunión familiar, un cumpleaños, un festejo especial o un encuentro de empresa, el pernil tiene algo muy valioso: convoca, viste y genera una experiencia relajada pero con presencia.
         </p>
 
         <div class="note-box">
-          No alcanza con que sea rico. También tiene que verse bien, invitar a acercarse, sumar al clima del evento
-          y transmitir que hubo criterio en lo que se eligió.
+          No alcanza con que sea rico. También tiene que verse bien, invitar a acercarse, sumar al clima del evento y transmitir que hubo criterio en lo que se eligió.
         </div>
       </div>
 
       <div class="image-frame">
-        <img src="assets/img/pernil-con-empanadas.webp" alt="Pernil con acompañamientos">
+        <img src="assets/img/pernil-con-empanadas.webp" alt="Pernil con acompañamientos para eventos">
       </div>
     </div>
   </section>
@@ -863,27 +885,26 @@
   <section id="galeria" class="section-light">
     <div class="container">
       <span class="kicker">Galería</span>
-      <h2 class="section-title">Una imagen más tentadora, más cálida y más premium.</h2>
+      <h2 class="section-title">Así se ven los perniles que hacen que la gente diga: “qué bueno estuvo esto”.</h2>
       <p class="section-text">
-        Estas imágenes muestran el tipo de presencia visual que hace que la comida no solo resuelva una necesidad,
-        sino que también sume valor al evento.
+        Una buena presentación abre el apetito antes del primer bocado. Estas fotos muestran una propuesta pensada para que la comida se vea rica, abundante y lista para disfrutar en cualquier tipo de evento.
       </p>
 
       <div class="gallery-grid">
         <div class="gallery-item large">
-          <img src="assets/img/pernil-feteado.webp" alt="Pernil feteado premium">
+          <img src="assets/img/pernil-feteado.webp" alt="Pernil feteado premium para eventos">
         </div>
         <div class="gallery-item">
-          <img src="assets/img/pernil-con-pimienta.webp" alt="Pernil con pimienta">
+          <img src="assets/img/pernil-con-pimienta.webp" alt="Pernil con pimienta para fiestas">
         </div>
         <div class="gallery-item">
-          <img src="assets/img/copetin.webp" alt="Copetín para eventos">
+          <img src="assets/img/copetin.webp" alt="Copetín y acompañamientos para eventos">
         </div>
         <div class="gallery-item">
-          <img src="assets/img/pernil-desde-arriba.webp" alt="Mesa de pernil desde arriba">
+          <img src="assets/img/pernil-desde-arriba.webp" alt="Mesa de pernil vista desde arriba">
         </div>
         <div class="gallery-item">
-          <img src="assets/img/otro-feteado.webp" alt="Pernil feteado">
+          <img src="assets/img/otro-feteado.webp" alt="Pernil feteado servido">
         </div>
       </div>
     </div>
@@ -892,27 +913,54 @@
   <section class="section-light" style="padding-top:0;">
     <div class="container">
       <span class="kicker">Por qué elegir esta propuesta</span>
-      <h2 class="section-title">Cuando todo se ve bien resuelto, el evento se siente mejor.</h2>
+      <h2 class="section-title">Por qué muchas personas eligen perniles para cumpleaños, fiestas y reuniones.</h2>
       <p class="section-text">
-        Una buena elección gastronómica no solo alimenta. También transmite criterio, hospitalidad y una mejor experiencia general.
+        Porque combinan tres cosas que importan de verdad: gustan, rinden y ayudan a resolver la comida del evento de una manera simple y atractiva.
       </p>
 
       <div class="light-cards">
         <article class="light-card">
-          <h4>Imagen cuidada</h4>
-          <p>La presentación aporta valor estético y hace que la propuesta se sienta más especial.</p>
+          <h4>Rinden bien</h4>
+          <p>Son una opción cómoda para servir a varias personas sin perder practicidad.</p>
         </article>
         <article class="light-card">
-          <h4>Sabor que acompaña</h4>
-          <p>La experiencia tiene que entrar por los ojos, pero también sostenerse en lo rico y abundante.</p>
+          <h4>Se disfrutan fácil</h4>
+          <p>Es una comida simple de comer, compartir y disfrutar en distintos formatos de evento.</p>
         </article>
         <article class="light-card">
-          <h4>Formato práctico</h4>
-          <p>Es una alternativa cómoda para compartir, servir y disfrutar sin complicaciones innecesarias.</p>
+          <h4>Se ven tentadores</h4>
+          <p>La presentación suma mucho y hace que la mesa llame la atención desde el inicio.</p>
         </article>
         <article class="light-card">
-          <h4>Más recordación</h4>
-          <p>Cuando la mesa llama la atención y además se disfruta, el evento gana presencia en la memoria del invitado.</p>
+          <h4>Te simplifican la organización</h4>
+          <p>Resolvé la comida con una propuesta clara, rica y que genera buena experiencia.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="faq" class="section-dark">
+    <div class="container">
+      <span class="kicker">Consultas frecuentes</span>
+      <h2 class="section-title">Lo que el cliente necesita saber para decidir rápido.</h2>
+      <p class="section-text">
+        Mientras más clara sea la propuesta, más fácil es avanzar. Estas son las preguntas que suelen aparecer antes de pedir presupuesto.
+      </p>
+
+      <div class="faq-grid">
+        <article class="faq-card">
+          <h3>¿Para qué tipo de eventos trabajan?</h3>
+          <p>Trabajamos con cumpleaños, fiestas, reuniones familiares, celebraciones especiales y eventos empresariales en Neuquén.</p>
+        </article>
+
+        <article class="faq-card">
+          <h3>¿Cómo pido presupuesto?</h3>
+          <p>Muy simple: escribinos por WhatsApp con la fecha, la cantidad estimada de personas y el tipo de evento.</p>
+        </article>
+
+        <article class="faq-card">
+          <h3>¿Atienden en Neuquén?</h3>
+          <p>Sí. La propuesta está orientada a eventos en Neuquén y alrededores, con atención directa y rápida por WhatsApp.</p>
         </article>
       </div>
     </div>
@@ -921,13 +969,13 @@
   <section class="cta">
     <div class="container cta-box">
       <span class="kicker">Solicitar propuesta</span>
-      <h2 class="section-title">Si querés que tu evento se vea mejor y se disfrute más, armemos una propuesta a la altura.</h2>
+      <h2 class="section-title">Pedí tu presupuesto por WhatsApp y resolvé la comida de tu evento de forma simple, rica y con buena presentación.</h2>
       <p class="section-text">
-        Escribinos por WhatsApp con fecha, tipo de evento y cantidad estimada de personas. Te respondemos con una opción clara, cálida y profesional.
+        Enviános la fecha, la cantidad estimada de personas y el tipo de evento. Te respondemos con una propuesta clara para que puedas organizarte rápido.
       </p>
 
       <div class="hero-actions" style="justify-content:center;">
-        <a class="btn btn-primary" href="https://wa.me/5492996566702?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20para%20perniles%20para%20evento." target="_blank">Hablar por WhatsApp</a>
+        <a class="btn btn-primary" href="https://wa.me/5492996566702?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20para%20perniles%20para%20evento." target="_blank">Pedir presupuesto ahora</a>
       </div>
     </div>
   </section>
@@ -942,7 +990,6 @@
       <div>
         <strong>Contacto</strong>
         <p>WhatsApp: +54 9 2996 56-6702</p>
-        <p>Email: contacto@tumarca.com</p>
       </div>
 
       <div>
@@ -958,6 +1005,11 @@
   </footer>
 
   <a class="wa" href="https://wa.me/5492996566702?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20para%20perniles%20para%20evento." target="_blank">WhatsApp</a>
+
+  <section style="display:none;">
+    <h2>Perniles para eventos en Neuquén</h2>
+    <p>Ofrecemos perniles para cumpleaños, fiestas, reuniones familiares, eventos empresariales y celebraciones especiales en Neuquén. Consultá por presupuesto de perniles para eventos por WhatsApp.</p>
+  </section>
 
 </body>
 </html>
