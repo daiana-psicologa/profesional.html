@@ -532,6 +532,11 @@
       pointer-events:none;
     }
 
+    #galeria .section-title,
+    #galeria .section-text{
+      max-width:980px;
+    }
+
     .light-cards{
       margin-top:38px;
       display:grid;
@@ -581,15 +586,15 @@
     }
 
     .google-wordmark{
-      font-size:clamp(2.6rem, 5vw, 4.8rem);
+      font-size:clamp(2rem, 3.2vw, 3.2rem);
       font-weight:800;
-      letter-spacing:-2px;
+      letter-spacing:-1px;
       line-height:1;
       display:flex;
       align-items:center;
       justify-content:center;
       gap:0;
-      filter:drop-shadow(0 8px 18px rgba(0,0,0,.12));
+      filter:drop-shadow(0 6px 14px rgba(0,0,0,.10));
     }
 
     .google-wordmark .g-blue{color:#4285F4}
@@ -605,11 +610,11 @@
     }
 
     .star-google{
-      width:30px;
-      height:30px;
+      width:22px;
+      height:22px;
       background:#F4B400;
       clip-path:polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
-      box-shadow:0 6px 14px rgba(244,180,0,.20);
+      box-shadow:0 4px 10px rgba(244,180,0,.18);
     }
 
     .reviews-viewport{
@@ -925,13 +930,13 @@
       .hero-points{gap:10px}
 
       .google-wordmark{
-        font-size:2.7rem;
+        font-size:2.3rem;
         letter-spacing:-1px;
       }
 
       .star-google{
-        width:24px;
-        height:24px;
+        width:20px;
+        height:20px;
       }
     }
   </style>
@@ -1093,7 +1098,7 @@
   </section>
 
   <section id="galeria" class="section-light">
-    <div class="container">
+    <div class="container centered">
       <span class="kicker">Galería</span>
       <h2 class="section-title">Así se ven los perniles que hacen que la gente diga: “qué bueno estuvo esto”.</h2>
       <p class="section-text">
