@@ -3,32 +3,39 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Perniles para Eventos en Neuquén | Perniles Premium para Fiestas y Reuniones</title>
-  <meta name="description" content="Perniles para eventos en Neuquén. Opciones para cumpleaños, fiestas, reuniones y eventos empresariales. Presentación cuidada, servicio profesional y presupuestos por WhatsApp." />
-  <meta name="theme-color" content="#1a120d" />
-  <meta name="keywords" content="perniles para eventos, perniles en Neuquén, pernil para cumpleaños, perniles para fiestas, catering de perniles, perniles para reuniones, perniles para eventos empresariales" />
+
+  <title>Perniles para Eventos en Neuquén | Pernil para Fiestas, Cumpleaños y Reuniones</title>
+  <meta
+    name="description"
+    content="Perniles para eventos en Neuquén capital. Servicio de pernil para cumpleaños, fiestas, reuniones familiares y eventos empresariales. Pedí tu presupuesto por WhatsApp."
+  />
+  <meta
+    name="keywords"
+    content="pernil Neuquén, perniles para eventos Neuquén, pernil para fiestas, pernil para cumpleaños, pernil para reuniones, pernil para eventos empresariales, catering pernil Neuquén"
+  />
+  <meta name="theme-color" content="#1b120d" />
 
   <style>
     :root{
-      --bg:#120c08;
-      --bg-2:#1a120d;
-      --bg-3:#241812;
-      --panel:#211711;
-      --panel-2:#2a1d16;
+      --bg:#140d09;
+      --bg-2:#1c120d;
+      --bg-3:#261913;
+      --panel:#211611;
+      --panel-2:#2b1d16;
       --terracotta:#b85d35;
-      --terracotta-2:#d07a4f;
-      --copper:#c4874d;
-      --sand:#d8c1a3;
-      --cream:#f6eee3;
-      --text:#f8f1e8;
-      --muted:#d7c4b1;
-      --muted-2:#bca792;
+      --terracotta-2:#cf774c;
+      --copper:#c98a53;
+      --cream:#f6eee4;
+      --sand:#dcc6ad;
+      --text:#fbf4ec;
+      --muted:#d8c4b0;
+      --muted-dark:#66564b;
       --line:rgba(255,255,255,.08);
-      --shadow:0 24px 60px rgba(0,0,0,.30);
-      --shadow-soft:0 12px 30px rgba(0,0,0,.18);
-      --radius-xl:30px;
-      --radius-lg:22px;
-      --radius-md:16px;
+      --shadow:0 24px 60px rgba(0,0,0,.28);
+      --shadow-soft:0 14px 30px rgba(0,0,0,.16);
+      --radius-xl:32px;
+      --radius-lg:24px;
+      --radius-md:18px;
       --max:1240px;
     }
 
@@ -37,16 +44,17 @@
     body{
       margin:0;
       font-family: Inter, Arial, Helvetica, sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(184,93,53,.08), transparent 26%),
-        radial-gradient(circle at right center, rgba(208,122,79,.06), transparent 20%),
-        linear-gradient(180deg, #120c08 0%, #17100b 100%);
       color:var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(184,93,53,.08), transparent 24%),
+        radial-gradient(circle at right center, rgba(201,138,83,.06), transparent 18%),
+        linear-gradient(180deg, var(--bg) 0%, #17100b 100%);
       line-height:1.5;
     }
 
     img{display:block;max-width:100%}
     a{text-decoration:none;color:inherit}
+    button{font-family:inherit}
 
     .container{
       width:min(92%, var(--max));
@@ -56,8 +64,8 @@
     .topbar{
       position:sticky;
       top:0;
-      z-index:1000;
-      background:rgba(15,10,7,.78);
+      z-index:1200;
+      background:rgba(14,10,8,.78);
       backdrop-filter: blur(14px);
       border-bottom:1px solid rgba(255,255,255,.06);
     }
@@ -85,18 +93,13 @@
       border-radius:18px;
       padding:10px;
       box-shadow:var(--shadow-soft);
-      border:1px solid rgba(255,255,255,.20);
-    }
-
-    .brand-copy{
-      min-width:0;
+      border:1px solid rgba(255,255,255,.18);
     }
 
     .brand-copy strong{
       display:block;
-      font-size:1.1rem;
-      color:#fff8ef;
-      letter-spacing:.1px;
+      color:#fff9f0;
+      font-size:1.08rem;
     }
 
     .brand-copy span{
@@ -106,25 +109,24 @@
       white-space:nowrap;
       overflow:hidden;
       text-overflow:ellipsis;
+      max-width:320px;
     }
 
     .menu{
       display:flex;
       align-items:center;
-      gap:28px;
+      gap:26px;
+      color:#f4e9dc;
       font-weight:600;
-      color:#f7ecdf;
     }
 
     .menu a{
       position:relative;
-      opacity:.92;
       transition:.25s ease;
     }
 
     .menu a:hover{
-      color:#ffd6b0;
-      opacity:1;
+      color:#ffd6b2;
     }
 
     .menu a::after{
@@ -139,27 +141,26 @@
       border-radius:999px;
     }
 
-    .menu a:hover::after{
-      width:100%;
-    }
+    .menu a:hover::after{width:100%}
 
     .btn{
       display:inline-flex;
       align-items:center;
       justify-content:center;
       gap:10px;
-      border:none;
-      border-radius:999px;
       padding:14px 26px;
+      border-radius:999px;
       font-weight:800;
       font-size:.98rem;
-      cursor:pointer;
+      border:none;
       transition:.25s ease;
+      cursor:pointer;
+      text-align:center;
     }
 
     .btn-primary{
-      color:#fff8ef;
       background:linear-gradient(135deg, var(--terracotta), var(--copper));
+      color:#fff8ef;
       box-shadow:0 14px 34px rgba(184,93,53,.22);
     }
 
@@ -180,13 +181,13 @@
 
     .hero{
       position:relative;
-      min-height:96vh;
+      min-height:95vh;
       display:flex;
       align-items:center;
       overflow:hidden;
       background:
-        linear-gradient(90deg, rgba(14,10,8,.82) 0%, rgba(14,10,8,.56) 42%, rgba(14,10,8,.28) 100%),
-        linear-gradient(180deg, rgba(11,8,6,.34) 0%, rgba(11,8,6,.70) 100%),
+        linear-gradient(90deg, rgba(14,10,8,.82) 0%, rgba(14,10,8,.58) 42%, rgba(14,10,8,.26) 100%),
+        linear-gradient(180deg, rgba(11,8,6,.30) 0%, rgba(11,8,6,.70) 100%),
         url('assets/img/portada-sandwich.webp') center center / cover no-repeat;
     }
 
@@ -195,8 +196,8 @@
       position:absolute;
       inset:0;
       background:
-        radial-gradient(circle at 20% 30%, rgba(208,122,79,.18), transparent 28%),
-        radial-gradient(circle at 70% 20%, rgba(196,135,77,.10), transparent 24%);
+        radial-gradient(circle at 20% 30%, rgba(207,119,76,.18), transparent 28%),
+        radial-gradient(circle at 72% 18%, rgba(201,138,83,.10), transparent 24%);
       pointer-events:none;
     }
 
@@ -205,9 +206,9 @@
       z-index:2;
       width:min(94%, 1320px);
       margin:auto;
-      padding:80px 0 72px;
+      padding:76px 0 68px;
       display:grid;
-      grid-template-columns:1.2fr .8fr;
+      grid-template-columns:1.22fr .78fr;
       gap:34px;
       align-items:end;
     }
@@ -221,17 +222,17 @@
       background:rgba(255,248,239,.06);
       border:1px solid rgba(255,255,255,.12);
       color:#ffd7b5;
-      font-size:.83rem;
+      font-size:.82rem;
       text-transform:uppercase;
       letter-spacing:2px;
       font-weight:800;
-      margin-bottom:22px;
+      margin-bottom:20px;
     }
 
     .hero-copy h1{
       margin:0 0 18px;
-      max-width:980px;
-      font-size:clamp(2.8rem, 5.6vw, 5.7rem);
+      max-width:1040px;
+      font-size:clamp(2.9rem, 5.8vw, 5.95rem);
       line-height:.95;
       letter-spacing:-2px;
       color:#fff8ef;
@@ -245,7 +246,7 @@
     }
 
     .hero-actions{
-      margin-top:30px;
+      margin-top:28px;
       display:flex;
       flex-wrap:wrap;
       gap:14px;
@@ -255,7 +256,7 @@
       display:flex;
       flex-wrap:wrap;
       gap:12px;
-      margin-top:28px;
+      margin-top:26px;
     }
 
     .hero-points span{
@@ -270,7 +271,7 @@
 
     .hero-card{
       justify-self:end;
-      width:min(100%, 420px);
+      width:min(100%, 430px);
       background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
       border:1px solid rgba(255,255,255,.12);
       border-radius:28px;
@@ -291,7 +292,7 @@
 
     .hero-card h3{
       margin:0 0 10px;
-      font-size:1.7rem;
+      font-size:1.72rem;
       line-height:1.05;
       color:#fff7ee;
     }
@@ -322,33 +323,12 @@
       margin-top:2px;
     }
 
-    section{
-      padding:96px 0;
-    }
+    section{padding:94px 0}
 
-    .kicker{
-      display:block;
-      margin-bottom:12px;
-      color:#e6b48f;
-      font-weight:800;
-      text-transform:uppercase;
-      letter-spacing:2px;
-      font-size:.82rem;
-    }
-
-    .section-title{
-      margin:0 0 16px;
-      font-size:clamp(2rem, 4vw, 4.2rem);
-      line-height:1.02;
-      letter-spacing:-1.8px;
-      color:#fff7ee;
-    }
-
-    .section-text{
-      margin:0;
-      max-width:900px;
-      color:var(--muted);
-      font-size:1.08rem;
+    .section-dark{
+      background:
+        linear-gradient(180deg, rgba(255,255,255,.01), rgba(255,255,255,0)),
+        linear-gradient(180deg, #1a120d 0%, #130d09 100%);
     }
 
     .section-light{
@@ -361,22 +341,46 @@
       color:#18120d;
     }
 
-    .section-light .section-text{
-      color:#5c4d42;
+    .section-light .section-text{color:#5d4f45}
+
+    .kicker{
+      display:block;
+      margin-bottom:12px;
+      color:#e6b48f;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      font-size:.82rem;
     }
 
-    .section-dark{
-      background:
-        linear-gradient(180deg, rgba(255,255,255,.01), rgba(255,255,255,0)),
-        linear-gradient(180deg, #1a120d 0%, #130d09 100%);
-    }
-
-    .intro{
+    .centered{
       text-align:center;
     }
 
+    .section-title{
+      margin:0 0 16px;
+      font-size:clamp(2rem, 4vw, 4.1rem);
+      line-height:1.04;
+      letter-spacing:-1.6px;
+      color:#fff7ee;
+      max-width:1100px;
+    }
+
+    .centered .section-title,
+    .centered .section-text{
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .section-text{
+      margin:0;
+      max-width:980px;
+      color:var(--muted);
+      font-size:1.08rem;
+    }
+
     .value-grid{
-      margin-top:34px;
+      margin-top:36px;
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:24px;
@@ -388,12 +392,13 @@
       background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
       border:1px solid rgba(255,255,255,.08);
       box-shadow:var(--shadow-soft);
+      text-align:center;
     }
 
     .value-card h3{
       margin:0 0 10px;
       color:#fff5ea;
-      font-size:1.45rem;
+      font-size:1.42rem;
     }
 
     .value-card p{
@@ -405,7 +410,7 @@
     .split{
       display:grid;
       grid-template-columns:1.05fr .95fr;
-      gap:38px;
+      gap:40px;
       align-items:center;
     }
 
@@ -441,6 +446,7 @@
       background:rgba(255,255,255,.04);
       border:1px solid rgba(255,255,255,.08);
       color:#ecd8c7;
+      max-width:820px;
     }
 
     .services-grid{
@@ -506,13 +512,9 @@
       transition:transform .45s ease;
     }
 
-    .gallery-item:hover img{
-      transform:scale(1.04);
-    }
+    .gallery-item:hover img{transform:scale(1.04)}
 
-    .gallery-item.large{
-      grid-row:1 / span 2;
-    }
+    .gallery-item.large{grid-row:1 / span 2}
 
     .gallery-item::after{
       content:"";
@@ -530,11 +532,12 @@
     }
 
     .light-card{
-      background:rgba(255,255,255,.58);
+      background:rgba(255,255,255,.62);
       border:1px solid rgba(0,0,0,.06);
       border-radius:24px;
       padding:28px;
       box-shadow:0 14px 30px rgba(0,0,0,.05);
+      text-align:center;
     }
 
     .light-card h4{
@@ -548,28 +551,191 @@
       color:#5f5046;
     }
 
-    .faq-grid{
+    .reviews-wrap{
       margin-top:34px;
+      position:relative;
+    }
+
+    .reviews-head{
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      margin-bottom:24px;
+    }
+
+    .google-badge{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      padding:10px 16px;
+      border-radius:999px;
+      background:rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.08);
+      color:#fff4e8;
+      font-weight:800;
+    }
+
+    .google-icon{
+      width:30px;
+      height:30px;
+      border-radius:50%;
+      background:#fff;
+      color:#4285F4;
+      display:grid;
+      place-items:center;
+      font-weight:900;
+      font-size:1.05rem;
+    }
+
+    .stars{
+      color:#ffcb45;
+      letter-spacing:2px;
+      font-size:1rem;
+    }
+
+    .reviews-viewport{
+      overflow:hidden;
+    }
+
+    .reviews-track{
+      display:flex;
+      transition:transform .45s ease;
+    }
+
+    .review-slide{
+      min-width:100%;
       display:grid;
       grid-template-columns:repeat(3,1fr);
       gap:22px;
     }
 
-    .faq-card{
+    .review-card{
       background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
       border:1px solid rgba(255,255,255,.08);
       border-radius:24px;
       padding:28px;
+      min-height:220px;
+      display:flex;
+      flex-direction:column;
+      justify-content:space-between;
+      box-shadow:var(--shadow-soft);
     }
 
-    .faq-card h3{
-      margin:0 0 10px;
-      color:#fff7ed;
-      font-size:1.2rem;
+    .review-card .review-stars{
+      color:#ffcb45;
+      letter-spacing:2px;
+      font-size:1rem;
+      margin-bottom:12px;
     }
 
-    .faq-card p{
+    .review-card p{
       margin:0;
+      color:#ead6c3;
+      font-size:1rem;
+    }
+
+    .review-author{
+      margin-top:18px;
+      color:#ffd8b8;
+      font-weight:700;
+      font-size:.95rem;
+    }
+
+    .review-controls{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:12px;
+      margin-top:22px;
+    }
+
+    .review-btn{
+      width:44px;
+      height:44px;
+      border-radius:50%;
+      border:1px solid rgba(255,255,255,.10);
+      background:rgba(255,255,255,.05);
+      color:#fff;
+      cursor:pointer;
+      font-size:1rem;
+      transition:.2s ease;
+    }
+
+    .review-btn:hover{
+      background:rgba(255,255,255,.10);
+    }
+
+    .review-dots{
+      display:flex;
+      gap:8px;
+    }
+
+    .review-dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:rgba(255,255,255,.18);
+      cursor:pointer;
+    }
+
+    .review-dot.active{
+      background:linear-gradient(135deg, var(--terracotta), var(--copper));
+    }
+
+    .faq-accordion{
+      margin-top:34px;
+      display:grid;
+      gap:16px;
+      max-width:980px;
+      margin-left:auto;
+      margin-right:auto;
+    }
+
+    .faq-item{
+      background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.03));
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:22px;
+      overflow:hidden;
+    }
+
+    .faq-question{
+      width:100%;
+      background:none;
+      border:none;
+      color:#fff7ed;
+      text-align:left;
+      padding:22px 24px;
+      font-size:1.06rem;
+      font-weight:800;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      cursor:pointer;
+    }
+
+    .faq-question span:last-child{
+      font-size:1.4rem;
+      line-height:1;
+      color:#ffd1ab;
+      transition:transform .25s ease;
+    }
+
+    .faq-item.open .faq-question span:last-child{
+      transform:rotate(45deg);
+    }
+
+    .faq-answer{
+      max-height:0;
+      overflow:hidden;
+      transition:max-height .3s ease;
+    }
+
+    .faq-answer p{
+      margin:0;
+      padding:0 24px 22px;
       color:#d6c2ad;
     }
 
@@ -588,16 +754,16 @@
       background:radial-gradient(circle at 20% 50%, rgba(208,122,79,.16), transparent 32%);
     }
 
-    .cta .cta-box{
+    .cta-box{
       position:relative;
       z-index:2;
-      max-width:900px;
       text-align:center;
+      max-width:1000px;
       margin:auto;
     }
 
-    .cta .section-title,
-    .cta .section-text{
+    .cta-box .section-title,
+    .cta-box .section-text{
       margin-left:auto;
       margin-right:auto;
     }
@@ -641,7 +807,7 @@
       position:fixed;
       right:18px;
       bottom:18px;
-      z-index:1200;
+      z-index:1300;
       background:#25D366;
       color:#fff;
       font-weight:800;
@@ -656,23 +822,15 @@
         grid-template-columns:1fr;
       }
 
-      .hero-card{
-        justify-self:start;
-      }
+      .hero-card{justify-self:start}
 
       .services-grid,
       .light-cards,
-      .faq-grid{
+      .value-grid{
         grid-template-columns:repeat(2,1fr);
       }
 
-      .value-grid{
-        grid-template-columns:1fr;
-      }
-
-      .footer-grid{
-        grid-template-columns:1fr;
-      }
+      .footer-grid{grid-template-columns:1fr}
 
       .gallery-grid{
         grid-template-columns:1fr 1fr;
@@ -684,24 +842,27 @@
         grid-column:1 / span 2;
       }
 
-      .menu{
-        display:none;
+      .review-slide{
+        grid-template-columns:1fr;
       }
+
+      .menu{display:none}
     }
 
-    @media (max-width: 680px){
+    @media (max-width: 720px){
       .hero{
         min-height:90vh;
         background-position:center;
       }
 
       .hero-copy h1{
-        letter-spacing:-1.3px;
+        font-size:clamp(2.45rem, 10vw, 4rem);
+        letter-spacing:-1.2px;
       }
 
       .services-grid,
       .light-cards,
-      .faq-grid,
+      .value-grid,
       .gallery-grid{
         grid-template-columns:1fr;
       }
@@ -711,30 +872,19 @@
         grid-template-rows:auto;
       }
 
-      .gallery-item.large{
-        grid-column:auto;
-      }
+      .gallery-item.large{grid-column:auto}
 
       .brand-logo{
         width:58px;
         height:58px;
       }
 
-      .brand-copy strong{
-        font-size:1rem;
-      }
+      .brand-copy strong{font-size:1rem}
+      .brand-copy span{font-size:.82rem}
 
-      .brand-copy span{
-        font-size:.82rem;
-      }
-
-      .btn{
-        width:100%;
-      }
-
-      .hero-actions{
-        flex-direction:column;
-      }
+      .btn{width:100%}
+      .hero-actions{flex-direction:column}
+      .hero-points{gap:10px}
     }
   </style>
 </head>
@@ -746,7 +896,7 @@
         <img src="assets/img/logo.png.webp" alt="Logo de Perniles Premium" class="brand-logo">
         <div class="brand-copy">
           <strong>Perniles Premium</strong>
-          <span>Eventos sociales, empresariales y celebraciones</span>
+          <span>Servicio de pernil para eventos en Neuquén</span>
         </div>
       </a>
 
@@ -754,11 +904,16 @@
         <a href="#propuesta">Propuesta</a>
         <a href="#servicios">Servicios</a>
         <a href="#galeria">Galería</a>
-        <a href="#faq">Consultas</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#consultas">Consultas</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
-      <a class="btn btn-primary" href="https://wa.me/5492996566702?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20para%20perniles%20para%20evento." target="_blank">Solicitar propuesta</a>
+      <a
+        class="btn btn-primary"
+        href="https://wa.me/5492996566702?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20para%20perniles%20para%20evento."
+        target="_blank"
+      >Solicitar propuesta</a>
     </div>
   </header>
 
@@ -768,19 +923,24 @@
         <span class="eyebrow">Perniles para eventos en Neuquén</span>
         <h1>Perniles para eventos que se ven bien, rinden bien y hacen quedar bien a quien organiza.</h1>
         <p>
-          Llevamos perniles para cumpleaños, fiestas, reuniones familiares y eventos empresariales con una presentación cuidada, abundante y lista para disfrutar. Una opción práctica, rica y visualmente atractiva para resolver la comida sin complicarte.
+          Servicio de pernil para cumpleaños, fiestas, reuniones familiares y eventos sociales en Neuquén capital. Una propuesta práctica, abundante y rica para resolver la comida del evento sin complicarte.
         </p>
 
         <div class="hero-actions">
-          <a class="btn btn-primary" href="https://wa.me/5492996566702?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20para%20perniles%20para%20evento." target="_blank">Pedir presupuesto</a>
+          <a
+            class="btn btn-primary"
+            href="https://wa.me/5492996566702?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20para%20perniles%20para%20evento."
+            target="_blank"
+          >Pedir presupuesto</a>
+
           <a class="btn btn-secondary" href="#galeria">Ver fotos reales</a>
         </div>
 
         <div class="hero-points">
           <span>Cumpleaños y fiestas</span>
           <span>Reuniones familiares</span>
-          <span>Eventos empresariales</span>
-          <span>Atención en Neuquén</span>
+          <span>Eventos sociales</span>
+          <span>Neuquén capital</span>
         </div>
       </div>
 
@@ -793,19 +953,19 @@
 
         <div class="hero-list">
           <div>Perniles con presentación cuidada.</div>
-          <div>Acompañamientos que completan la mesa.</div>
+          <div>Posibilidad de sumar empanadas, bruschettas o entradas.</div>
           <div>Formato práctico para servir y disfrutar.</div>
-          <div>Presupuesto directo por WhatsApp.</div>
+          <div>Atención rápida por WhatsApp.</div>
         </div>
       </aside>
     </div>
   </section>
 
   <section id="propuesta" class="section-dark">
-    <div class="container intro">
+    <div class="container centered">
       <span class="kicker">Propuesta de valor</span>
       <h2 class="section-title">Si querés resolver la comida de tu evento con algo rico, abundante y que guste de verdad, esta propuesta es para vos.</h2>
-      <p class="section-text" style="margin-left:auto;margin-right:auto;">
+      <p class="section-text">
         Los perniles funcionan porque son prácticos, rendidores y visualmente atractivos. Te ayudan a ofrecer una comida que se disfruta, se comparte fácil y hace que el evento se vea mejor sin entrar en complicaciones.
       </p>
 
@@ -814,10 +974,12 @@
           <h3>Te resuelve la comida</h3>
           <p>Una opción práctica para no complicarte organizando platos difíciles o servicios innecesarios.</p>
         </article>
+
         <article class="value-card">
           <h3>Le gusta a la gente</h3>
           <p>Es una propuesta conocida, tentadora y fácil de disfrutar en cumpleaños, reuniones y celebraciones.</p>
         </article>
+
         <article class="value-card">
           <h3>Hace lucir el evento</h3>
           <p>Cuando la mesa se ve abundante y bien presentada, todo el encuentro transmite mejor imagen.</p>
@@ -829,19 +991,19 @@
   <section class="section-dark" style="padding-top:0;">
     <div class="container split">
       <div>
-        <span class="kicker">Para quienes quieren quedar bien de verdad</span>
+        <span class="kicker">Pensado para eventos sociales</span>
         <h2 class="section-title">Una propuesta ideal para eventos que buscan sabor, estética y una sensación de abundancia bien resuelta.</h2>
         <p class="section-text">
-          Ya sea una reunión familiar, un cumpleaños, un festejo especial o un encuentro de empresa, el pernil tiene algo muy valioso: convoca, viste y genera una experiencia relajada pero con presencia.
+          Ya sea un cumpleaños, un festejo familiar, una reunión especial o un encuentro social, el pernil tiene algo muy valioso: convoca, viste la mesa y genera una experiencia relajada pero con presencia.
         </p>
 
         <div class="note-box">
-          No alcanza con que sea rico. También tiene que verse bien, invitar a acercarse, sumar al clima del evento y transmitir que hubo criterio en lo que se eligió.
+          No alcanza con que sea rico. También tiene que verse bien, invitar a acercarse y transmitir que hubo criterio en lo que se eligió para recibir a la gente.
         </div>
       </div>
 
       <div class="image-frame">
-        <img src="assets/img/pernil-con-empanadas.webp" alt="Pernil con acompañamientos para eventos">
+        <img src="assets/img/pernil-con-empanadas.webp" alt="Pernil para eventos con empanadas y acompañamientos">
       </div>
     </div>
   </section>
@@ -851,32 +1013,32 @@
       <span class="kicker">Servicios</span>
       <h2 class="section-title">Opciones pensadas para distintos formatos de evento.</h2>
       <p class="section-text">
-        La propuesta se adapta según el tipo de encuentro, la cantidad de invitados y la imagen que querés transmitir.
+        La propuesta se adapta al tipo de encuentro, a la cantidad estimada de invitados y a lo que querés ofrecer en la mesa.
       </p>
 
       <div class="services-grid">
         <article class="service-card">
           <div class="num">01</div>
           <h4>Pernil clásico</h4>
-          <p>Una opción cálida, rendidora y sabrosa para celebraciones y reuniones donde querés algo rico y bien presentado.</p>
+          <p>Una opción cálida, rendidora y sabrosa para cumpleaños, reuniones y celebraciones donde querés algo rico y bien presentado.</p>
         </article>
 
         <article class="service-card">
           <div class="num">02</div>
           <h4>Pernil con acompañamientos</h4>
-          <p>Incluye panes y complementos para una experiencia más completa, visualmente más tentadora y más disfrutable.</p>
+          <p>Incluye panes y complementos para una experiencia más completa, más tentadora y más disfrutable.</p>
         </article>
 
         <article class="service-card">
           <div class="num">03</div>
-          <h4>Mesa de presentación</h4>
-          <p>Armado pensado para que la propuesta luzca desde el primer vistazo y eleve la escena general del evento.</p>
+          <h4>Entradas para sumar</h4>
+          <p>Podés complementar con empanadas, bruschettas u otras opciones simples que acompañen bien la propuesta.</p>
         </article>
 
         <article class="service-card">
           <div class="num">04</div>
-          <h4>Formato para empresas</h4>
-          <p>Ideal para reuniones internas, aniversarios, celebraciones laborales y encuentros donde importa quedar bien.</p>
+          <h4>Formato para reuniones</h4>
+          <p>Ideal para eventos sociales y encuentros donde importa ofrecer algo que guste y sea fácil de compartir.</p>
         </article>
       </div>
     </div>
@@ -885,26 +1047,26 @@
   <section id="galeria" class="section-light">
     <div class="container">
       <span class="kicker">Galería</span>
-      <h2 class="section-title">Así se ven nuestros perniles.</h2>
+      <h2 class="section-title">Así se ven los perniles que hacen que la gente diga: “qué bueno estuvo esto”.</h2>
       <p class="section-text">
-        Una buena presentación abre el apetito antes del primer bocado. Estas fotos muestran una propuesta pensada para que la comida se vea rica, abundante y lista para disfrutar en cualquier tipo de evento.
+        Una buena presentación abre el apetito antes del primer bocado. Estas fotos muestran una propuesta pensada para que la comida se vea rica, abundante y lista para disfrutar.
       </p>
 
       <div class="gallery-grid">
         <div class="gallery-item large">
-          <img src="assets/img/pernil-feteado.webp" alt="Pernil feteado premium para eventos">
+          <img src="assets/img/pernil-feteado.webp" alt="Pernil feteado para fiestas y eventos">
         </div>
         <div class="gallery-item">
-          <img src="assets/img/pernil-con-pimienta.webp" alt="Pernil con pimienta para fiestas">
+          <img src="assets/img/pernil-con-pimienta.webp" alt="Pernil con pimienta servido">
         </div>
         <div class="gallery-item">
-          <img src="assets/img/copetin.webp" alt="Copetín y acompañamientos para eventos">
+          <img src="assets/img/copetin.webp" alt="Copetín y entradas para acompañar el pernil">
         </div>
         <div class="gallery-item">
           <img src="assets/img/pernil-desde-arriba.webp" alt="Mesa de pernil vista desde arriba">
         </div>
         <div class="gallery-item">
-          <img src="assets/img/otro-feteado.webp" alt="Pernil feteado servido">
+          <img src="assets/img/otro-feteado.webp" alt="Pernil feteado listo para servir">
         </div>
       </div>
     </div>
@@ -913,24 +1075,29 @@
   <section class="section-light" style="padding-top:0;">
     <div class="container">
       <span class="kicker">Por qué elegir esta propuesta</span>
-      <h2 class="section-title">Por qué muchas personas eligen perniles para cumpleaños, fiestas y reuniones.</h2>
-      <p class="section-text">
-        Porque combinan tres cosas que importan de verdad: gustan, rinden y ayudan a resolver la comida del evento de una manera simple y atractiva.
-      </p>
+      <div class="centered">
+        <h2 class="section-title">Por qué muchas personas eligen perniles para cumpleaños, fiestas y reuniones.</h2>
+        <p class="section-text">
+          Porque combinan tres cosas que importan de verdad: gustan, rinden y ayudan a resolver la comida del evento de una manera simple y atractiva.
+        </p>
+      </div>
 
       <div class="light-cards">
         <article class="light-card">
           <h4>Rinden bien</h4>
           <p>Son una opción cómoda para servir a varias personas sin perder practicidad.</p>
         </article>
+
         <article class="light-card">
           <h4>Se disfrutan fácil</h4>
           <p>Es una comida simple de comer, compartir y disfrutar en distintos formatos de evento.</p>
         </article>
+
         <article class="light-card">
           <h4>Se ven tentadores</h4>
           <p>La presentación suma mucho y hace que la mesa llame la atención desde el inicio.</p>
         </article>
+
         <article class="light-card">
           <h4>Te simplifican la organización</h4>
           <p>Resolvé la comida con una propuesta clara, rica y que genera buena experiencia.</p>
@@ -939,29 +1106,138 @@
     </div>
   </section>
 
-  <section id="faq" class="section-dark">
-    <div class="container">
-      <span class="kicker">Consultas frecuentes</span>
-      <h2 class="section-title">Lo que el cliente necesita saber para decidir rápido.</h2>
+  <section id="opiniones" class="section-dark">
+    <div class="container centered">
+      <span class="kicker">Lo que opinan nuestros clientes</span>
+      <h2 class="section-title">Las recomendaciones de la gente también ayudan a decidir.</h2>
       <p class="section-text">
-        Mientras más clara sea la propuesta, más fácil es avanzar. Estas son las preguntas que suelen aparecer antes de pedir presupuesto.
+        Cuando un servicio sale bien, se nota en lo que la gente dice. Estas opiniones están pensadas para transmitir confianza y reforzar la decisión de compra.
       </p>
 
-      <div class="faq-grid">
-        <article class="faq-card">
-          <h3>¿Para qué tipo de eventos trabajan?</h3>
-          <p>Trabajamos con cumpleaños, fiestas, reuniones familiares, celebraciones especiales y eventos empresariales en Neuquén.</p>
-        </article>
+      <div class="reviews-wrap">
+        <div class="reviews-head">
+          <div class="google-badge">
+            <div class="google-icon">G</div>
+            <div>Opiniones en Google</div>
+          </div>
+          <div class="stars">★★★★★</div>
+        </div>
 
-        <article class="faq-card">
-          <h3>¿Cómo pido presupuesto?</h3>
-          <p>Muy simple: escribinos por WhatsApp con la fecha, la cantidad estimada de personas y el tipo de evento.</p>
-        </article>
+        <div class="reviews-viewport">
+          <div class="reviews-track" id="reviewsTrack">
 
-        <article class="faq-card">
-          <h3>¿Atienden en Neuquén?</h3>
-          <p>Sí. La propuesta está orientada a eventos en Neuquén y alrededores, con atención directa y rápida por WhatsApp.</p>
-        </article>
+            <div class="review-slide">
+              <article class="review-card">
+                <div>
+                  <div class="review-stars">★★★★★</div>
+                  <p>Fue de lo mejor del evento. El pernil estaba muy bueno, rendía un montón y a la gente le encantó.</p>
+                </div>
+                <div class="review-author">Cliente verificado</div>
+              </article>
+
+              <article class="review-card">
+                <div>
+                  <div class="review-stars">★★★★★</div>
+                  <p>Súper recomendable. Se veía muy bien presentado y resolvió perfecto la comida del cumpleaños.</p>
+                </div>
+                <div class="review-author">Cliente verificado</div>
+              </article>
+
+              <article class="review-card">
+                <div>
+                  <div class="review-stars">★★★★★</div>
+                  <p>Muy rico el pernil y muy práctica toda la propuesta. Nos simplificó muchísimo la organización.</p>
+                </div>
+                <div class="review-author">Cliente verificado</div>
+              </article>
+            </div>
+
+            <div class="review-slide">
+              <article class="review-card">
+                <div>
+                  <div class="review-stars">★★★★★</div>
+                  <p>Todo salió excelente. La presentación estaba muy cuidada y la mesa llamaba la atención apenas llegabas.</p>
+                </div>
+                <div class="review-author">Cliente verificado</div>
+              </article>
+
+              <article class="review-card">
+                <div>
+                  <div class="review-stars">★★★★★</div>
+                  <p>Nos preguntaron un montón quién había hecho el pernil. Muy buena experiencia y muy rico todo.</p>
+                </div>
+                <div class="review-author">Cliente verificado</div>
+              </article>
+
+              <article class="review-card">
+                <div>
+                  <div class="review-stars">★★★★★</div>
+                  <p>Volveríamos a pedir sin dudas. Fue una opción abundante, rica y ideal para compartir en familia.</p>
+                </div>
+                <div class="review-author">Cliente verificado</div>
+              </article>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="review-controls">
+          <button class="review-btn" id="prevReview" aria-label="Opinión anterior">‹</button>
+          <div class="review-dots" id="reviewDots"></div>
+          <button class="review-btn" id="nextReview" aria-label="Opinión siguiente">›</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="consultas" class="section-dark" style="padding-top:0;">
+    <div class="container centered">
+      <span class="kicker">Consultas frecuentes</span>
+      <h2 class="section-title">Preguntas que suelen aparecer antes de pedir presupuesto.</h2>
+      <p class="section-text">
+        Acá tenés respuestas claras para que sea más fácil avanzar y decidir si esta propuesta es la indicada para tu evento.
+      </p>
+
+      <div class="faq-accordion">
+        <div class="faq-item open">
+          <button class="faq-question" type="button">
+            <span>¿Para qué tipo de eventos trabajan?</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Trabajamos con cumpleaños, fiestas, reuniones familiares, celebraciones especiales y encuentros sociales en Neuquén capital y alrededores.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>¿Qué incluye la propuesta?</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>La propuesta se centra en el servicio de pernil. Según lo que necesites, se puede complementar con panes, acompañamientos, empanadas, bruschettas u opciones simples para sumar a la mesa.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>¿Cómo pido presupuesto?</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Muy fácil. Escribinos por WhatsApp con la fecha, la cantidad estimada de personas y el tipo de evento. Con eso te respondemos con una propuesta clara.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span>¿Atienden en Neuquén?</span>
+            <span>+</span>
+          </button>
+          <div class="faq-answer">
+            <p>Sí. El servicio está orientado principalmente a Neuquén capital, con atención directa y rápida por WhatsApp.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -975,7 +1251,11 @@
       </p>
 
       <div class="hero-actions" style="justify-content:center;">
-        <a class="btn btn-primary" href="https://wa.me/5492996566702?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20para%20perniles%20para%20evento." target="_blank">Pedir presupuesto ahora</a>
+        <a
+          class="btn btn-primary"
+          href="https://wa.me/5492996566702?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20para%20perniles%20para%20evento."
+          target="_blank"
+        >Pedir presupuesto ahora</a>
       </div>
     </div>
   </section>
@@ -984,12 +1264,13 @@
     <div class="container footer-grid">
       <div>
         <strong>Perniles Premium</strong>
-        <p>Servicio de perniles para eventos sociales, reuniones, celebraciones especiales y encuentros empresariales.</p>
+        <p>Servicio de pernil para eventos sociales, reuniones, cumpleaños y celebraciones especiales en Neuquén.</p>
       </div>
 
       <div>
         <strong>Contacto</strong>
         <p>WhatsApp: +54 9 2996 56-6702</p>
+        <p>Email: contacto@tumarca.com</p>
       </div>
 
       <div>
@@ -1004,12 +1285,95 @@
     </div>
   </footer>
 
-  <a class="wa" href="https://wa.me/5492996566702?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20para%20perniles%20para%20evento." target="_blank">WhatsApp</a>
+  <a
+    class="wa"
+    href="https://wa.me/5492996566702?text=Hola%2C%20quiero%20consultar%20por%20un%20presupuesto%20para%20perniles%20para%20evento."
+    target="_blank"
+  >WhatsApp</a>
 
-  <section style="display:none;">
-    <h2>Perniles para eventos en Neuquén</h2>
-    <p>Ofrecemos perniles para cumpleaños, fiestas, reuniones familiares, eventos empresariales y celebraciones especiales en Neuquén. Consultá por presupuesto de perniles para eventos por WhatsApp.</p>
-  </section>
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach((item) => {
+      const button = item.querySelector('.faq-question');
+      const answer = item.querySelector('.faq-answer');
+
+      if (item.classList.contains('open')) {
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+
+      button.addEventListener('click', () => {
+        const isOpen = item.classList.contains('open');
+
+        faqItems.forEach((other) => {
+          other.classList.remove('open');
+          other.querySelector('.faq-answer').style.maxHeight = null;
+        });
+
+        if (!isOpen) {
+          item.classList.add('open');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+
+    const track = document.getElementById('reviewsTrack');
+    const slides = Array.from(track.children);
+    const prevBtn = document.getElementById('prevReview');
+    const nextBtn = document.getElementById('nextReview');
+    const dotsWrap = document.getElementById('reviewDots');
+    let currentSlide = 0;
+    let autoSlide;
+
+    function buildDots() {
+      slides.forEach((_, index) => {
+        const dot = document.createElement('button');
+        dot.className = 'review-dot' + (index === 0 ? ' active' : '');
+        dot.setAttribute('aria-label', 'Ir a opinión ' + (index + 1));
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsWrap.appendChild(dot);
+      });
+    }
+
+    function updateDots() {
+      const dots = dotsWrap.querySelectorAll('.review-dot');
+      dots.forEach((dot, index) => {
+        dot.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      track.style.transform = `translateX(-${index * 100}%)`;
+      updateDots();
+      restartAuto();
+    }
+
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      goToSlide(currentSlide);
+    }
+
+    function prevSlideFn() {
+      currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+      goToSlide(currentSlide);
+    }
+
+    function startAuto() {
+      autoSlide = setInterval(nextSlide, 5000);
+    }
+
+    function restartAuto() {
+      clearInterval(autoSlide);
+      startAuto();
+    }
+
+    prevBtn.addEventListener('click', prevSlideFn);
+    nextBtn.addEventListener('click', nextSlide);
+
+    buildDots();
+    startAuto();
+  </script>
 
 </body>
 </html>
