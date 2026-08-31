@@ -44,8 +44,12 @@
   .container{width:100%;max-width:1140px;margin:0 auto;padding:0 24px;}
   section{padding:76px 0;}
 
-  .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease, transform .6s ease;}
+  .reveal{opacity:0;transform:translateY(34px);transition:opacity .65s cubic-bezier(.16,.84,.44,1), transform .65s cubic-bezier(.16,.84,.44,1);}
   .reveal.visible{opacity:1;transform:translateY(0);}
+  .reveal.d1{transition-delay:.08s;}
+  .reveal.d2{transition-delay:.18s;}
+  .reveal.d3{transition-delay:.28s;}
+  .reveal.d4{transition-delay:.38s;}
 
   .btn{
     display:inline-flex;align-items:center;gap:8px;
@@ -65,12 +69,21 @@
 
   /* Header */
   header{position:fixed;top:0;left:0;right:0;z-index:100;background:var(--navy);box-shadow:0 2px 20px rgba(15,61,99,0.25);}
+  header::before{
+    content:"";position:absolute;top:0;left:0;right:0;height:3px;
+    background:linear-gradient(90deg,var(--navy-deep),var(--navy-soft),var(--silver),var(--navy-soft),var(--navy-deep));
+  }
   nav{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1140px;margin:0 auto;}
   .logo{display:flex;align-items:center;gap:12px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:19px;letter-spacing:.03em;color:var(--white);}
   .logo span{color:var(--white);font-weight:500;opacity:.85;}
   .logo-icon{width:38px;height:38px;object-fit:cover;border-radius:50%;background:var(--white);padding:2px;box-shadow:0 0 0 1px rgba(255,255,255,.15);}
   .nav-links{display:flex;gap:32px;list-style:none;}
-  .nav-links a{font-weight:500;font-size:14px;letter-spacing:.03em;text-transform:uppercase;color:rgba(255,255,255,0.85);transition:color .2s;}
+  .nav-links a{position:relative;font-weight:500;font-size:14px;letter-spacing:.03em;text-transform:uppercase;color:rgba(255,255,255,0.85);transition:color .2s;}
+  .nav-links a::after{
+    content:"";position:absolute;left:0;right:100%;bottom:-4px;height:1.5px;
+    background:var(--silver);transition:right .25s ease;
+  }
+  .nav-links a:hover::after{right:0;}
   .nav-links a:hover{color:var(--white);}
   .nav-cta{display:none;}
   .menu-toggle{display:none;background:none;border:none;font-size:26px;cursor:pointer;color:var(--white);}
@@ -149,7 +162,12 @@
   .about-photo img{width:100%;height:100%;object-fit:cover;}
   .about-name{font-size:36px;line-height:1.2;color:var(--navy);margin-bottom:8px;}
   .about-role{font-family:'Montserrat',sans-serif;font-weight:600;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent-deep);margin-bottom:22px;}
-  .about-quote{font-style:italic;color:var(--text);font-size:16.5px;line-height:1.75;margin-bottom:26px;border-left:3px solid var(--accent);padding-left:20px;}
+  .about-quote{position:relative;font-style:italic;color:var(--text);font-size:16.5px;line-height:1.75;margin-bottom:26px;padding-left:24px;}
+  .about-quote::before{
+    content:"\201C";position:absolute;left:-6px;top:-18px;
+    font-family:'Playfair Display',serif;font-style:normal;font-size:76px;
+    color:var(--silver);opacity:.55;line-height:1;
+  }
   @media(max-width:860px){
     .about-inner{grid-template-columns:1fr;}
     .about-photo{max-width:300px;margin:0 auto;}
@@ -290,14 +308,14 @@
     <div class="about-photo reveal">
       <img src="assets/img/B.jpeg" alt="Dr. Lucas Beltrán, odontólogo">
     </div>
-    <div class="reveal">
-      <div class="section-eyebrow">Quién te va a atender</div>
-      <h2 class="about-name">Dr. Lucas Beltrán</h2>
-      <p class="about-role">Odontólogo</p>
-      <blockquote class="about-quote">
+    <div>
+      <div class="section-eyebrow reveal d1">Quién te va a atender</div>
+      <h2 class="about-name reveal d2">Dr. Lucas Beltrán</h2>
+      <p class="about-role reveal d2">Odontólogo</p>
+      <blockquote class="about-quote reveal d3">
         "¿Cuántas veces postergaste una visita al dentista por temor o porque nadie te explicó con claridad lo que ibas a atravesar? Elegí esta profesión para cambiar esa historia: te escucho antes de empezar cualquier procedimiento, te explico cada paso, y recién entonces avanzamos. Ya sea una limpieza de rutina o una cirugía oral, lo que buscás es sentirte genuinamente cuidado — y es precisamente eso lo que vas a encontrar aquí."
       </blockquote>
-      <a href="#contacto" class="btn btn-primary">Agendá tu consulta</a>
+      <a href="#contacto" class="btn btn-primary reveal d4">Agendá tu consulta</a>
     </div>
   </div>
 </section>
@@ -393,7 +411,7 @@
       <div class="cta-panel reveal">
         <h3>Reservá en un toque</h3>
         <p>Elegí cómo preferís contactarnos y coordinamos tu turno enseguida.</p>
-        <a class="cta-btn" href="https://wa.me/5492996252498?text=Hola%2C%20quiero%20agendar%20un%20turno." target="_blank" rel="noopener">
+        <a class="cta-btn" href="https://wa.me/5492996252498?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta%20con%20el%20Dr.%20Beltr%C3%A1n.%20%C2%BFPodr%C3%ADan%20indicarme%20la%20disponibilidad%3F" target="_blank" rel="noopener">
           <span class="cta-ico"><svg viewBox="0 0 24 24" width="20" height="20" fill="#fff"><path d="M12 2.5A9.4 9.4 0 0 0 3.8 16.9L2.5 21.5l4.7-1.2A9.4 9.4 0 1 0 12 2.5Zm5.4 13.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-3.9-4.6-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.7 1.2 1.6 1.9 1.1.9 2 1.2 2.3 1.4.3.1.5.1.6-.1.2-.2.7-.8.9-1 .2-.2.3-.2.6-.1.2.1 1.5.7 1.8.9.3.1.5.2.5.3.1.2.1.6-.1 1.1Z"/></svg></span>
           <span><strong>Escribir por WhatsApp</strong><span>Respuesta rápida, coordinamos por chat</span></span>
         </a>
@@ -416,7 +434,7 @@
         <div class="social-row">
           <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1"/></svg></a>
           <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M15.5 8.5h-2a1.5 1.5 0 0 0-1.5 1.5v2h3.3l-.4 3H12v7.5H9v-7.5H7v-3h2v-2.3C9 6.9 10.6 5 13.4 5h2.1v3.5Z"/></svg></a>
-          <a href="https://wa.me/5492996252498" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M12 2.5A9.4 9.4 0 0 0 3.8 16.9L2.5 21.5l4.7-1.2A9.4 9.4 0 1 0 12 2.5Zm5.4 13.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-3.9-4.6-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.7 1.2 1.6 1.9 1.1.9 2 1.2 2.3 1.4.3.1.5.1.6-.1.2-.2.7-.8.9-1 .2-.2.3-.2.6-.1.2.1 1.5.7 1.8.9.3.1.5.2.5.3.1.2.1.6-.1 1.1Z"/></svg></a>
+          <a href="https://wa.me/5492996252498?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta%20con%20el%20Dr.%20Beltr%C3%A1n.%20%C2%BFPodr%C3%ADan%20indicarme%20la%20disponibilidad%3F" aria-label="WhatsApp"><svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor"><path d="M12 2.5A9.4 9.4 0 0 0 3.8 16.9L2.5 21.5l4.7-1.2A9.4 9.4 0 1 0 12 2.5Zm5.4 13.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-3.9-4.6-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.7 1.2 1.6 1.9 1.1.9 2 1.2 2.3 1.4.3.1.5.1.6-.1.2-.2.7-.8.9-1 .2-.2.3-.2.6-.1.2.1 1.5.7 1.8.9.3.1.5.2.5.3.1.2.1.6-.1 1.1Z"/></svg></a>
         </div>
       </div>
       <div class="footer-col">
@@ -441,7 +459,7 @@
   </div>
 </footer>
 
-<a class="wa-float" href="https://wa.me/5492996252498" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
+<a class="wa-float" href="https://wa.me/5492996252498?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20consulta%20con%20el%20Dr.%20Beltr%C3%A1n.%20%C2%BFPodr%C3%ADan%20indicarme%20la%20disponibilidad%3F" target="_blank" rel="noopener" aria-label="Escribinos por WhatsApp">
   <svg viewBox="0 0 24 24" width="26" height="26" fill="#fff"><path d="M12 2.5A9.4 9.4 0 0 0 3.8 16.9L2.5 21.5l4.7-1.2A9.4 9.4 0 1 0 12 2.5Zm5.4 13.2c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .1-1.7-.1-.4-.1-.9-.3-1.6-.6-2.7-1.2-4.5-3.9-4.6-4.1-.1-.2-1.1-1.4-1.1-2.7s.7-1.9 1-2.2c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.4.2.5.7 1.8.8 1.9.1.2.1.3 0 .5-.1.2-.2.3-.3.5-.2.2-.3.3-.5.5-.2.2-.3.4-.1.7.2.3.7 1.2 1.6 1.9 1.1.9 2 1.2 2.3 1.4.3.1.5.1.6-.1.2-.2.7-.8.9-1 .2-.2.3-.2.6-.1.2.1 1.5.7 1.8.9.3.1.5.2.5.3.1.2.1.6-.1 1.1Z"/></svg>
 </a>
 
@@ -456,7 +474,7 @@
     entries.forEach(entry => {
       if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
     });
-  }, { threshold: 0.15 });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
   revealEls.forEach(el => observer.observe(el));
 </script>
 
