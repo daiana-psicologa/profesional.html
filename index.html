@@ -83,35 +83,13 @@
   }
   @media(min-width:769px){ .nav-cta{display:inline-flex;} }
 
-  /* HERO — carrusel de fondo con transición entre 3 fotos reales */
+  /* HERO — foto enmarcada al costado (no de fondo), para que se aprecie completa */
   .hero{
-    position:relative;min-height:660px;display:flex;align-items:center;
-    padding:140px 0 80px;overflow:hidden;
-    background-color:var(--navy-deep);
+    position:relative;overflow:hidden;
+    background:linear-gradient(160deg,var(--navy-deep) 0%,var(--navy) 100%);
+    padding:150px 0 76px;
   }
-  .hero-slide{
-    position:absolute;inset:0;background-size:cover;background-position:center 30%;
-    opacity:0;animation:heroFade 18s infinite;
-  }
-  .hero-slide.slide-1{background-image:url("assets/img/D.jpeg");animation-delay:0s;}
-  .hero-slide.slide-2{background-image:url("assets/img/A.jpeg");animation-delay:6s;}
-  .hero-slide.slide-3{background-image:url("assets/img/C.jpeg");animation-delay:12s;}
-  @keyframes heroFade{
-    0%{opacity:0;}
-    4%{opacity:1;}
-    30%{opacity:1;}
-    36%{opacity:0;}
-    100%{opacity:0;}
-  }
-  @media (prefers-reduced-motion: reduce){
-    .hero-slide{animation:none;opacity:0;}
-    .hero-slide.slide-1{opacity:1;}
-  }
-  .hero-overlay{
-    position:absolute;inset:0;
-    background:linear-gradient(100deg,rgba(8,43,71,.94) 32%,rgba(8,43,71,.72) 58%,rgba(15,61,99,.4) 100%);
-  }
-  .hero-inner{position:relative;z-index:1;max-width:600px;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;}
   .hero-eyebrow{
     display:inline-flex;align-items:center;gap:8px;
     color:var(--silver-light);
@@ -119,15 +97,38 @@
     letter-spacing:.2em;text-transform:uppercase;margin-bottom:22px;
   }
   .hero-eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:.6;}
-  .hero h1{font-size:54px;line-height:1.14;color:var(--white);margin-bottom:20px;letter-spacing:-.01em;}
+  .hero h1{font-size:50px;line-height:1.14;color:var(--white);margin-bottom:20px;letter-spacing:-.01em;}
   .hero p.lead{font-size:17px;color:rgba(255,255,255,0.86);margin-bottom:30px;max-width:460px;}
   .hero-actions{display:flex;flex-wrap:wrap;gap:16px;margin-bottom:34px;}
-  .hero-trust{display:flex;gap:28px;flex-wrap:wrap;}
+  .hero-trust{display:flex;gap:26px;flex-wrap:wrap;}
   .hero-trust-item{display:flex;align-items:center;gap:9px;color:rgba(255,255,255,.9);font-size:13px;font-weight:600;}
   .hero-trust-item svg{width:20px;height:20px;flex-shrink:0;stroke:var(--silver-light);}
+
+  .hero-photo-wrap{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;box-shadow:0 30px 70px rgba(0,0,0,.4);}
+  .hero-photo-slide{position:absolute;inset:0;background-size:cover;background-position:center 18%;opacity:0;animation:heroPhotoFade 12s infinite;}
+  .hero-photo-slide.slide-1{background-image:url("assets/img/A.jpeg");animation-delay:0s;}
+  .hero-photo-slide.slide-2{background-image:url("assets/img/C.jpeg");animation-delay:6s;background-position:center 12%;}
+  @keyframes heroPhotoFade{
+    0%{opacity:0;}
+    6%{opacity:1;}
+    44%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:0;}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .hero-photo-slide{animation:none;opacity:0;}
+    .hero-photo-slide.slide-1{opacity:1;}
+  }
+  .hero-photo-wrap::after{
+    content:"";position:absolute;inset:0;
+    background:linear-gradient(0deg,rgba(8,43,71,.35),transparent 45%);
+    pointer-events:none;
+  }
   @media(max-width:900px){
-    .hero{min-height:auto;padding:120px 0 60px;}
+    .hero{padding:126px 0 56px;}
+    .hero-grid{grid-template-columns:1fr;gap:32px;}
     .hero h1{font-size:34px;}
+    .hero-photo-wrap{aspect-ratio:16/10;order:-1;}
   }
 
   /* Section headings */
@@ -201,22 +202,22 @@
   .contact-item strong{display:block;font-size:14.5px;margin-bottom:2px;}
   .contact-item span{color:var(--text-light);font-size:13.5px;}
 
-  .booking-form{background:var(--white);border-radius:var(--radius);padding:34px;box-shadow:var(--shadow);}
-  .booking-form h3{font-size:19px;margin-bottom:6px;}
-  .booking-form>p{color:var(--text-light);font-size:13.5px;margin-bottom:22px;}
-  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
-  .form-group{margin-bottom:16px;}
-  .form-group label{display:block;font-size:13px;font-weight:600;margin-bottom:6px;color:var(--text);}
-  .form-group input,.form-group select,.form-group textarea{
-    width:100%;padding:12px 14px;border-radius:10px;border:1.5px solid rgba(15,61,99,0.16);
-    font-family:'Inter',sans-serif;font-size:14px;background:var(--ice);transition:border-color .2s;
+  .cta-panel{background:linear-gradient(160deg,var(--navy),var(--navy-deep));border-radius:var(--radius);padding:40px 36px;box-shadow:var(--shadow);display:flex;flex-direction:column;justify-content:center;}
+  .cta-panel h3{color:var(--white);font-size:22px;margin-bottom:8px;}
+  .cta-panel>p{color:rgba(255,255,255,.78);font-size:14.5px;margin-bottom:26px;}
+  .cta-btn{
+    display:flex;align-items:center;gap:14px;width:100%;padding:18px 22px;border-radius:14px;
+    background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);margin-bottom:14px;
+    transition:transform .2s ease, background .2s ease, border-color .2s ease;
   }
-  .form-group input:focus,.form-group select:focus,.form-group textarea:focus{outline:none;border-color:var(--accent);}
-  .form-group textarea{resize:vertical;min-height:80px;}
-  .form-submit{width:100%;justify-content:center;margin-top:4px;}
-  .form-note{font-size:12px;color:var(--text-light);margin-top:12px;text-align:center;}
+  .cta-btn:last-child{margin-bottom:0;}
+  .cta-btn:hover{transform:translateY(-3px);background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.28);}
+  .cta-btn .cta-ico{width:44px;height:44px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
+  .cta-btn.cta-call .cta-ico{background:var(--silver-deep);}
+  .cta-btn strong{display:block;color:var(--white);font-size:15.5px;margin-bottom:2px;}
+  .cta-btn span{color:rgba(255,255,255,.7);font-size:13px;}
+  .cta-note{font-size:12.5px;color:rgba(255,255,255,.55);margin-top:18px;text-align:center;}
   @media(max-width:860px){.contact-inner{grid-template-columns:1fr;}}
-  @media(max-width:500px){.form-row{grid-template-columns:1fr;}}
 
   /* Footer */
   footer{background:var(--navy-deep);color:rgba(255,255,255,0.75);padding:48px 0 22px;}
@@ -261,22 +262,25 @@
 </header>
 
 <section class="hero" id="top">
-  <div class="hero-slide slide-1"></div>
-  <div class="hero-slide slide-2"></div>
-  <div class="hero-slide slide-3"></div>
-  <div class="hero-overlay"></div>
-  <div class="container hero-inner">
-    <span class="hero-eyebrow">Odontología general y estética</span>
-    <h1>Tu sonrisa, en <em>las mejores manos</em></h1>
-    <p class="lead">Atención dental cálida y profesional, con tecnología moderna y un trato pensado para que te sientas seguro en cada visita.</p>
-    <div class="hero-actions">
-      <a href="#contacto" class="btn btn-primary">Agendá tu turno</a>
-      <a href="#servicios" class="btn btn-outline btn-outline-light">Ver tratamientos</a>
+  <div class="container hero-grid">
+    <div class="hero-inner">
+      <span class="hero-eyebrow">Odontología general y estética</span>
+      <h1>Tu sonrisa, en <em>las mejores manos</em></h1>
+      <p class="lead">Atención dental cálida y profesional, con tecnología moderna y un trato pensado para que te sientas seguro en cada visita.</p>
+      <div class="hero-actions">
+        <a href="#contacto" class="btn btn-primary">Agendá tu turno</a>
+        <a href="#servicios" class="btn btn-outline btn-outline-light">Ver tratamientos</a>
+      </div>
+      <div class="hero-trust">
+        <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6z"/></svg>Formación clínica actualizada</span>
+        <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Tecnología moderna</span>
+        <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.3 6.2 21l1.6-6.9L2 9.2l7-.6L12 2l3 6.6 7 .6-5.8 4.9 1.6 6.9z"/></svg>4.9★ de valoración</span>
+      </div>
     </div>
-    <div class="hero-trust">
-      <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 4 6v6c0 5 3.4 8.7 8 10 4.6-1.3 8-5 8-10V6z"/></svg>Formación clínica actualizada</span>
-      <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>Tecnología moderna</span>
-      <span class="hero-trust-item"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 17.3 6.2 21l1.6-6.9L2 9.2l7-.6L12 2l3 6.6 7 .6-5.8 4.9 1.6 6.9z"/></svg>4.9★ de valoración</span>
+
+    <div class="hero-photo-wrap">
+      <div class="hero-photo-slide slide-1"></div>
+      <div class="hero-photo-slide slide-2"></div>
     </div>
   </div>
 </section>
@@ -386,33 +390,19 @@
         <div class="contact-item"><div class="ico">✉️</div><div><strong>Email</strong><span>contacto@drlucasbeltran.com</span></div></div>
       </div>
 
-      <form class="booking-form reveal" id="bookingForm">
-        <h3>Reservá tu consulta</h3>
-        <p>Completá el formulario y te contactamos para confirmar tu turno.</p>
-        <div class="form-row">
-          <div class="form-group"><label for="name">Nombre completo</label><input type="text" id="name" name="name" placeholder="Tu nombre" required></div>
-          <div class="form-group"><label for="phone">Teléfono</label><input type="tel" id="phone" name="phone" placeholder="Tu número" required></div>
-        </div>
-        <div class="form-group">
-          <label for="treatment">Tratamiento de interés</label>
-          <select id="treatment" name="treatment" required>
-            <option value="" disabled selected>Elegí una opción</option>
-            <option value="Odontología general">Odontología general</option>
-            <option value="Limpieza y periodoncia">Limpieza y periodoncia</option>
-            <option value="Restauradora">Restauradora</option>
-            <option value="Placas para bruxismo">Placas para bruxismo</option>
-            <option value="Blanqueamiento">Blanqueamiento</option>
-            <option value="Prótesis fija">Prótesis fija</option>
-            <option value="Prótesis removibles">Prótesis removibles</option>
-            <option value="Cirugía oral">Cirugía oral</option>
-            <option value="Otro">Otro / No estoy seguro</option>
-          </select>
-        </div>
-        <div class="form-group"><label for="date">Fecha preferida</label><input type="date" id="date" name="date"></div>
-        <div class="form-group"><label for="message">Mensaje (opcional)</label><textarea id="message" name="message" placeholder="Contanos brevemente qué necesitás..."></textarea></div>
-        <button type="submit" class="btn btn-primary form-submit">Reservá tu consulta 📅</button>
-        <p class="form-note">Al enviar, se abrirá WhatsApp con tus datos para confirmar el turno.</p>
-      </form>
+      <div class="cta-panel reveal">
+        <h3>Reservá en un toque</h3>
+        <p>Elegí cómo preferís contactarnos y coordinamos tu turno enseguida.</p>
+        <a class="cta-btn" href="https://wa.me/5492996252498?text=Hola%2C%20quiero%20agendar%20un%20turno." target="_blank" rel="noopener">
+          <span class="cta-ico">💬</span>
+          <span><strong>Escribir por WhatsApp</strong><span>Respuesta rápida, coordinamos por chat</span></span>
+        </a>
+        <a class="cta-btn cta-call" href="tel:+5492996252498">
+          <span class="cta-ico">📞</span>
+          <span><strong>Llamar ahora</strong><span>+54 9 2996 25-2498</span></span>
+        </a>
+        <p class="cta-note">Lun a Vie 9:00–13:00 y 15:00–20:00 · Sáb 9:00–13:00</p>
+      </div>
     </div>
   </div>
 </section>
@@ -466,22 +456,6 @@
     });
   }, { threshold: 0.15 });
   revealEls.forEach(el => observer.observe(el));
-
-  const WHATSAPP_NUMBER = "5492996252498";
-  document.getElementById('bookingForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    const name = document.getElementById('name').value.trim();
-    const phone = document.getElementById('phone').value.trim();
-    const treatment = document.getElementById('treatment').value;
-    const date = document.getElementById('date').value;
-    const message = document.getElementById('message').value.trim();
-    let text = `Hola, soy ${name}. Quiero agendar un turno para *${treatment}*.`;
-    if (date) text += ` Fecha preferida: ${date}.`;
-    text += ` Mi teléfono: ${phone}.`;
-    if (message) text += ` Mensaje: ${message}`;
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
-    window.open(url, '_blank');
-  });
 </script>
 
 </body>
